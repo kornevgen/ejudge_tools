@@ -4,5 +4,6 @@
     ( astyle \
       --keep-one-line-blocks \
       --keep-one-line-statements \
+      --pad-oper \
       < $1 | diff -Z $1 - 1>&2 )
 
