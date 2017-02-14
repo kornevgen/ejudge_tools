@@ -2,8 +2,9 @@
 
 /opt/ejudge/libexec/ejudge/checkers/style_c $1 && \
     ( astyle \
-      --keep-one-line-blocks \
-      --keep-one-line-statements \
+      --add-brackets \
       --pad-oper \
+      --pad-header \
+      --align-pointer=name \
       < $1 | diff -Z $1 - 1>&2 )
 
